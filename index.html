@@ -54,13 +54,45 @@ $ dev_appserver.py .
 
 <h3>Instructions on Windows</h3>
 
-<p>Navigate to <a href="https://github.com/benhaynor/mestairplane">https://github.com/benhaynor/mestairplane</a> and click on the zip link on the upper left. Unzip the file and open Google App Engine Launcher.  Under the file menu, choose, "Add Existing Application", and navigate to the base directory of the project.</p>
+<p>Click on the zip link on the upper left hand of this page. Unzip the file and open Google App Engine Launcher.  Under the file menu, choose, "Add Existing Application", and navigate to the base directory of the project.</p>
 
 <h2>Grading</h2>
 
-<p>You should only need to modify the file under static/seatmap.js.  You should take a look at the files static/seatmap.css and htmltemplates/seatmap.html.  The necessary functionality is captured in the following test cases.  Navigate to test/test.py to see the test cases.  In this folder, execute the command python test.py.  If you pass all the test cases, congrats! You got it!</p>
+<p>You should only need to modify the file under static/seatmap.js.  You should take a look at the files static/seatmap.css and htmltemplates/seatmap.html.  In version one, you'll be graded primarily on style.  </p>
 
-<h3>Test cases</h3>
+<h3>Style</h3>
+
+<p>I'm interested to see if you can take the object oriented programming principles you've learned in Python and Java, and apply them in a new context. A hint, if your init function looks like:</p>
+
+<div class="highlight"><pre><span class="kd">function</span> <span class="nx">init</span><span class="p">(){</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">airplane_out</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Airplane</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"seatmap_out"</span><span class="p">));</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">airplane_return</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Airplane</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"seatmap_return"</span><span class="p">));</span>   
+<span class="p">}</span>
+</pre></div>
+
+<p>, then you're doing pretty well.</p>
+
+<p>A quick reminder about OOP in javascript. Declare a construction and objects as folllows.</p>
+
+<div class="highlight"><pre><span class="kd">function</span> <span class="nx">Student</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">ben</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">'ben'</span><span class="p">,</span><span class="mi">24</span><span class="p">);</span>
+<span class="nx">fred</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">'sam'</span><span class="p">,</span><span class="mi">25</span><span class="p">);</span>
+</pre></div>
+
+<p>ben.name, fred.name, should now be accessable.  To add instance methods, use prototype as in:</p>
+
+<div class="highlight"><pre><span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">haveBirthday</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>The necessary functionality is captured in the following test cases. Navigate to test/test.py to see the test cases.  In this folder, execute the command python test.py.  If you pass all the test cases, congrats! You got it!</p>
+
+<h3>Functionality</h3>
 
 <p>Your program will be graded on both functionality and style.  The functionality is captured in the following unit tests.</p>
 
