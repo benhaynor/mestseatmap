@@ -39,7 +39,7 @@
 
 <p>First to download the project, open a terminal on your VM, move to a directory where you want to store your folder, and enter the following commands.</p>
 
-<pre><code>$ git clone https://github.com/benhaynor/seatmapjs
+<pre><code>$ git clone https://github.com/benhaynor/mestseatmap.git
 </code></pre>
 
 <p>To start the server, enter the following</p>
@@ -48,13 +48,19 @@
 $ dev_appserver.py .
 </code></pre>
 
-<p>The command dev_appserver.py replaces the Google App Engine launcher that you may be familiar with from windows. You should now be able to browse to a nearly blank page by opening a browser and navigating to <a href="http://localhost:8000">http://localhost:8000</a>.</p>
+<p>You should now be able to browse to a nearly blank page by opening a browser and navigating to <a href="http://localhost:8000">http://localhost:8000</a>.</p>
 
 <p>We'll be adding a few features to the seatmap that we worked on last semester.  To get a reminder of what we implemented, visit: <a href="https://docs.google.com/document/d/1gd4rXCZBkmmFetru-ujxYTomVgNChCFfySLks__gcBU/edit">this google doc</a>.  Or to see the app in action, check out <a href="http://mesttech2014.appspot.com/">http://mesttech2014.appspot.com</a></p>
 
 <h3>Instructions on Windows</h3>
 
-<p>Download </p>
+<p>Navigate to <a href="https://github.com/benhaynor/mestairplane">https://github.com/benhaynor/mestairplane</a> and click on the zip link on the upper left. Unzip the file and open Google App Engine Launcher.  Under the file menu, choose, "Add Existing Application", and navigate to the base directory of the project.</p>
+
+<h2>Grading</h2>
+
+<p>You should only need to modify the file under static/seatmap.js.  You should take a look at the files static/seatmap.css and htmltemplates/seatmap.html.  The necessary functionality is captured in the following test cases.  Navigate to test/test.py to see the test cases.  In this folder, execute the command python test.py.  If you pass all the test cases, congrats! You got it!</p>
+
+<h3>Test cases</h3>
 
 <p>Your program will be graded on both functionality and style.  The functionality is captured in the following unit tests.</p>
 
